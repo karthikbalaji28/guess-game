@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GUESS GAME</title>
+		<style>
+			body {
+  				background-color: #fff685;
+  				color: #0049B7;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<table>
+				<tr>
+					<th> R1 </th>
+					<th> R2 </th>
+					<th> R3 </th>
+					{% for x in name %}
+					<tr>
+						{% for y in x %}
+							<td> {{ y }} </td>
+						{% endfor %}
+					</tr>
+					{% endfor %}
+				</tr>
+			</table>
+			<form action = {{url_for('query2') }} method = "POST">
+				<br>
+	  			<label for="teams">Select the row in which the number you thought is present:</label>
+	  			<select id="row" name="row">
+	    			<option name="row" value= "1"> 1 </option>
+	    			<option name="row" value= "2"> 2 </option>
+	    			<option name="row" value= "3"> 3 </option>
+	  			</select>
+	  			<br>
+	  			<br>
+	  			<input type = "submit">
+	  		</form>
+	  	</center>
+	</body>
+ </center>
+</html>

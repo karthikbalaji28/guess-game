@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GUESS GAME</title>
+		<style>
+			body {
+  				background-color: #fff685;
+  				color: #0049B7;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<h3> The number you thought is : {{ name }} </h3>
+			<h3> Wanna play again ? </h3>
+			<form action = {{url_for('thank') }} method = "POST">
+				<input type="radio" name = "row" value = "yes">YES
+	  			<input type="radio" name = "row" value = "no" >NO
+	  			<br>
+	  			<br>
+	  			<input type = "submit">
+	  		</form>
+	  	</center>
+	</body>
+</html>
